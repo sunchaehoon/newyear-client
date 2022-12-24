@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `
 
 export const Background = styled.div`
-    background-image: url("/img/Background1.png");
+    background-image: url("/img/Background2.png");
     background-size: cover;
     position: fixed;
     top: 0;
@@ -17,10 +17,30 @@ export const Background = styled.div`
 `
 
 export const NavLine = styled.div`
-    margin: 50px 50px 0 0;
+    margin: 30px 30px 0 0;
     background-image: url("/img/Bar.png");
-    float: right;
-    width: 60px;
-    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 35px;
+    background-size: 100%;
+    background-repeat: no-repeat;
     cursor: pointer;
+    z-index: 2;
 `
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
