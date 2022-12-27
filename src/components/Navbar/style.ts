@@ -6,7 +6,7 @@ export const NavContainer = styled.div<{right: string}>`
     height: 100%;
     right: ${(props) => props.right};
     transition-duration: 0.5s;
-    z-index: 1;
+    z-index: 2;
     background-color: rgba(25, 23, 52, 0.8);
     top: 0;
 `
@@ -68,6 +68,7 @@ export const AccountText = styled.div`
 export const Signup = styled.div`
     color: #C5C5C5;
     cursor: pointer;
+    font-size: 15px; 
 `
 
 export const Category = styled.div`
