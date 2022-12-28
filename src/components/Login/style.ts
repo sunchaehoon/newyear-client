@@ -22,7 +22,7 @@ export const LoginBackground = styled.div`
 `
 
 export const LoginWrap = styled.div`
-    width: 30%;
+    width: 26%;
     height: 540px;
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 30px;
@@ -35,6 +35,7 @@ export const LoginWrap = styled.div`
 export const LoginTxt = styled.div`
    display: flex;
    justify-content: center;
+   margin-bottom: 70px;
 `
 
 export const LoginLO = styled.div`
@@ -52,7 +53,7 @@ export const LoginGIN = styled.div`
 `
 
 export const InputDiv = styled.div`
-    margin-top: 35px;
+    margin-top: 20px;
     display: block;
 `
 
@@ -87,15 +88,9 @@ export const LoginCheck = styled.div`
     margin-top: 40px;
     width: 50%;
     height: 50px;
-    border-radius: 50px;
-    :hover {
-        background-color: #FBFCF3;
-        transition-duration: 0.28s;
-    }
 `
 
 export const LoginBtn = styled.div`
-    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;

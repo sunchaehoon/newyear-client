@@ -60,7 +60,7 @@ const Login: NextPage = () => {
     <>
       <S.Background>
         <S.LoginBackground>
-          <Link href="/"><S.BackArrow /></Link>
+          <S.BackArrow onClick={() => {router.back()}} />
           <S.LoginWrap>
             <S.LoginTxt>
               <S.LoginLO>LO</S.LoginLO>
