@@ -9,6 +9,7 @@ export const NavContainer = styled.div<{right: string}>`
     z-index: 2;
     background-color: rgba(25, 23, 52, 0.8);
     top: 0;
+    backdrop-filter: blur(10px);
 `
 
 export const NavWrapper = styled.div`
@@ -82,9 +83,6 @@ export const Lists = styled.div`
     font-size: 18px;
     margin-bottom: 5px;
     cursor: pointer;
-`
-export const FcsLists = styled(Lists)`
-    color: yellow;
 `
 
 export const NavFooter = styled.ul`

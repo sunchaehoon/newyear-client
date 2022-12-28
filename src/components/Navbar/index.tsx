@@ -42,11 +42,11 @@ const Navbar = ({
 
           <S.Line />
           <S.Category>
-            <S.Lists style={{ color: ro === "/" ? "yellow" : "white" }}>
+            <S.Lists style={{ color: ro === "/" ? "#C5C5C5" : "white" }}>
               메인페이지
             </S.Lists>
             <S.Lists
-              style={{ color: ro === "/Mypg" ? "yellow" : "white" }}
+              style={{ color: ro === "/Mypage" ? "#C5C5C5" : "white" }}
               onClick={() => {
                 ResetClick();
                 setClickMypg(true);
@@ -55,7 +55,7 @@ const Navbar = ({
               마이페이지
             </S.Lists>
             <S.Lists
-              style={{ color: ro === "/Schedule" ? "yellow" : "white" }}
+              style={{ color: ro === "/Schedule" ? "#C5C5C5" : "white" }}
               onClick={() => {
                 ResetClick();
                 setClickSchedule(true);
@@ -64,7 +64,7 @@ const Navbar = ({
               신년 계획 작성
             </S.Lists>
             <S.Lists
-              style={{ color: ro === "/Feed" ? "yellow" : "white" }}
+              style={{ color: ro === "/Feed" ? "#C5C5C5" : "white" }}
               onClick={() => {
                 ResetClick();
                 setClickFeed(true);
@@ -73,7 +73,7 @@ const Navbar = ({
               신년 피드
             </S.Lists>
             <S.Lists
-              style={{ color: ro === "/Luck" ? "yellow" : "white" }}
+              style={{ color: ro === "/Luck" ? "#C5C5C5" : "white" }}
               onClick={() => {
                 ResetClick();
                 setClickLuck(true);
