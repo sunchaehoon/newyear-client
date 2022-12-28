@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import * as S from "./style";
+import { useRouter } from "next/router";
 
 const Signup = () => {
   const [nameValue, setNameValue] = useState("");
@@ -12,6 +13,7 @@ const Signup = () => {
   const [noId, setNoId] = useState<boolean>(false);
   const [noPw, setNoPw] = useState<boolean>(false);
   const [noCheckpw, setNoCheckpw] = useState<boolean>(false);
+  const router = useRouter();
 
   function ChangeNameInput(e: any) {
     setNameValue(e.target.value);
@@ -81,9 +83,7 @@ const Signup = () => {
     <>
       <S.Background>
         <S.SignupBackground>
-          <Link href="/">
-            <S.BackArrow />
-          </Link>
+            <S.BackArrow onClick={() => {router.back()}} />
           <S.SignupWrap>
             <S.SignupTxt>
               <S.Signup회원>회원</S.Signup회원>
