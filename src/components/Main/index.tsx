@@ -5,7 +5,7 @@ import * as S from "./style";
 import Navbar from "../Navbar";
 import { useRouter } from "next/router";
 
-const Main: NextPage = () => {
+const Main = () => {
   const [showNav, setShowNav] = useState<boolean>(false);
   const [clickMypg, setClickMypg] = useState<boolean>(false);
   const [clickSchedule, setClickSchedule] = useState<boolean>(false);
@@ -13,7 +13,7 @@ const Main: NextPage = () => {
   const [clickLuck, setClickLuck] = useState<boolean>(false);
   const [showArrow, setShowArrow] = useState("none");
   const router = useRouter();
-  const ro = router.pathname;
+  const ro = router.asPath;
 
   function NavClick() {
     setShowNav((prev) => !prev);
@@ -21,20 +21,29 @@ const Main: NextPage = () => {
 
   function CreateSnow() {
     const el = document.createElement("div");
-    el.classList.add('snow');
-    el.style.marginLeft = Math.floor(Math.random() * window.innerWidth) + 'px';
+    el.classList.add("snow");
+    el.style.marginLeft = Math.floor(Math.random() * window.innerWidth) + "px";
+    el.style.zIndex = "1";
     document.body.appendChild(el);
   }
 
+  const CheckLogin = () => {
+    
+  }
+
   useEffect(() => {
-    for(let i=0; i<50; i++) {
+    for (let i = 0; i < 30; i++) {
       CreateSnow();
     }
-    if(clickMypg === true || clickSchedule === true || clickFeed === true || clickLuck === true) {
+    if (
+      clickMypg === true ||
+      clickSchedule === true ||
+      clickFeed === true ||
+      clickLuck === true
+    ) {
       setShowArrow("block");
     }
   }, [clickMypg, clickSchedule, clickFeed, clickLuck]);
-  
 
   return (
     <>
@@ -60,18 +69,23 @@ const Main: NextPage = () => {
               : ""}
           </S.CapsuleTxt>
           <S.Button display={showArrow}>
-            <Link href={
-                clickMypg === true
-                ? "/Mypg"
-                : clickSchedule === true
-                ? "/Schedule"
-                : clickFeed === true
-                ? "/Feed"
-                : clickLuck === true
-                ? "/Luck"
-                : ""
-              }
-            ><S.Arrow  /></Link>
+            <S.ArrowWrap>
+              <Link
+                href={
+                  clickMypg === true
+                    ? "/Mypage"
+                    : clickSchedule === true
+                    ? "/Schedule"
+                    : clickFeed === true
+                    ? "/Feed"
+                    : clickLuck === true
+                    ? "/Luck"
+                    : ""
+                }
+              >
+                <S.Arrow onClick={CheckLogin} />
+              </Link>
+            </S.ArrowWrap>
           </S.Button>
         </S.Capsule>
       </S.Background>

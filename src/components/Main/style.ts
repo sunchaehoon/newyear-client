@@ -59,9 +59,13 @@ export const Button = styled.div<{display: string}>`
     display: ${(props) => props.display};
 `
 
-export const Arrow = styled.div`
+export const ArrowWrap = styled.div`
     height: 100%;
     margin: 0 27%;
+`
+
+export const Arrow = styled.div`
+    height: 100%;
     background-image: url("/img/Arrow.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -71,6 +75,7 @@ export const Arrow = styled.div`
         transition-duration: 0.25s;
     }
 `
+
 
 
 
